@@ -6,6 +6,7 @@
 2. [Design Patterns](#design-patterns)
     - [Creational Patterns](#creational-patterns)
     - [Structural Patterns](#structural-patterns)
+        - [Decorator Pattern](#decorator-pattern)
     - [Behavioral Patterns](#behavioral-patterns)
         - [Strategy Pattern](#strategy-pattern)
         - [Observer Pattern](#observer-pattern)
@@ -92,7 +93,25 @@ class OrderService {
 *Coming soon...*
 
 ### Structural Patterns {#structural-patterns}
-*Coming soon...*
+
+#### Decorator Pattern {#decorator-pattern}
+
+The Decorator Pattern allows you to add new functionality to objects dynamically without altering their structure. It is useful for adhering to the Open/Closed Principle and for composing behaviors at runtime.
+
+**Example from codebase:**  
+Located in [`designpatterns/structural_design_pattern/decorator/`](designpatterns/structural_design_pattern/decorator/)
+
+- `Coffee` interface defines the contract for coffee objects.
+- `BasicCoffee` is a concrete implementation of `Coffee`.
+- `CoffeeDecorator` is an abstract class that implements `Coffee` and wraps another `Coffee` object.
+- `MilkDecorator` and `SugarDecorator` are concrete decorators that add milk and sugar functionality.
+
+**Sample usage:**
+```java
+Coffee coffee = new SugarDecorator(new MilkDecorator(new BasicCoffee()));
+System.out.println(coffee.getDescription()); // Basic Coffee, Milk, Sugar
+System.out.println("Cost: $" + coffee.cost()); // Cost: $6.5
+```
 
 ### Behavioral Patterns {#behavioral-patterns}
 
