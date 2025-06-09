@@ -1,4 +1,9 @@
 # systemdesign-lld-hld
+In this document, we explore the core principles of System Design, focusing on both High-Level Design (HLD) and Low-Level Design (LLD). Our goal is to build a solid foundation for creating scalable, maintainable, and efficient software systems.
+
+We cover essential topics such as SOLID principles and various Design Patterns—Creational, Structural, and Behavioral—along with real-world examples to solidify understanding. This guide is designed for developers, architects, and learners aiming to enhance their design skills or prepare for technical interviews.
+
+
 
 ## Table of Contents
 
